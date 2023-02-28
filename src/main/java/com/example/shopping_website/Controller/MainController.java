@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 public class MainController {
@@ -13,10 +14,16 @@ public class MainController {
     {
         return "index";
     }*/
-    @RequestMapping("/login")
-    public String login()
+    @GetMapping("login")
+    public String loginPage()
     {
         System.out.print("Login page opened");
         return "login";
+    }
+    @GetMapping("home")
+    public String homePage()
+    {
+        //System.out.print("Login page opened");
+        return "home";
     }
 }
